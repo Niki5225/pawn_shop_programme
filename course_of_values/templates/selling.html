@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="form">
+        <h2>Продаване на валута</h2>
+        <form class="register-form" action="{% url 'buying' %}" method="post">
+            {{ form.as_div }}
+            {% csrf_token %}
+            <button type="submit">Купуване</button>
+        </form>
+    </div>
+{% endblock %}
