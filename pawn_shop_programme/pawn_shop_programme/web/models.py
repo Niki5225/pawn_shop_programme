@@ -5,7 +5,7 @@ from django.db import models
 
 
 class EuroBought(models.Model):
-    course_bought = models.PositiveIntegerField(
+    course_bought = models.FloatField(
         default=1.94,
         null=True,
         blank=True,
@@ -18,7 +18,7 @@ class EuroBought(models.Model):
 
 
 class EuroSold(models.Model):
-    course_sold = models.PositiveIntegerField(
+    course_sold = models.FloatField(
         default=1.96,
         null=True,
         blank=True,
@@ -31,7 +31,7 @@ class EuroSold(models.Model):
 
 
 class PoundBought(models.Model):
-    course_bought = models.PositiveIntegerField(
+    course_bought = models.FloatField(
         null=False,
         blank=False,
     )
@@ -43,7 +43,7 @@ class PoundBought(models.Model):
 
 
 class PoundSold(models.Model):
-    course_sold = models.PositiveIntegerField(
+    course_sold = models.FloatField(
         null=False,
         blank=False,
     )
@@ -66,7 +66,7 @@ class OtherBought(models.Model):
         blank=False,
     )
 
-    course_bought = models.PositiveIntegerField(
+    course_bought = models.FloatField(
         null=False,
         blank=False,
     )
@@ -79,7 +79,7 @@ class OtherSold(models.Model):
         blank=False,
     )
 
-    course_sold = models.PositiveIntegerField(
+    course_sold = models.FloatField(
         null=False,
         blank=False,
     )

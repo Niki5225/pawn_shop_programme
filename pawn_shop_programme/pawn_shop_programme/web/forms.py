@@ -2,7 +2,6 @@ from django import forms
 
 from pawn_shop_programme.web.models import EuroBought, EuroSold, OtherSold, OtherBought, PoundSold, PoundBought
 
-
 class BuyEuroForm(forms.ModelForm):
     class Meta:
         model = EuroBought
@@ -73,6 +72,7 @@ class BuyOtherValueForm(forms.ModelForm):
         fields = '__all__'
 
         labels = {
+            'value_name': 'Име на валутата',
             'course_bought': 'Курс на купуване',
             'quantity': 'Количество',
         }
