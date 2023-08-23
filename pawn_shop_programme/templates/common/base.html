@@ -5,11 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<nav>
+<nav style="text-align: center; font-size: 22px; padding: 12px">
     <a href="{% url 'buy dashboard' %}">Купуване</a>
     <a href="{% url 'sell dashboard' %}">Продаване</a>
+    <a href="{% url 'report' %}">Дневен отчет</a>
 </nav>
-{% block content %}
-{% endblock %}
+<main style="text-align: center; font-size: 22px">
+    {% block content %}
+    {% endblock %}
+</main>
 </body>
 </html>

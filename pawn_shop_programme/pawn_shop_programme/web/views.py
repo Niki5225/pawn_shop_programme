@@ -19,13 +19,13 @@ class Report(views.TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context['total-euro-bought'] = get_total_sum_euro_bought()
-        context['total-euro-sold'] = get_total_sum_euro_sold()
-        context['total-pound-bought'] = get_total_sum_pound_bought()
-        context['total-pound-sold'] = get_total_sum_pound_sold()
-        context['total-other-bought'] = get_total_sum_other_values_bought()
-        context['total-other-sold'] = get_total_sum_other_values_sold()
-        context['total-turnover'] = get_total()
+        context['total_euro_bought'] = get_total_sum_euro_bought()
+        context['total_euro_sold'] = get_total_sum_euro_sold()
+        context['total_pound_bought'] = get_total_sum_pound_bought()
+        context['total_pound_sold'] = get_total_sum_pound_sold()
+        context['total_other_bought'] = get_total_sum_other_values_bought()
+        context['total_other_sold'] = get_total_sum_other_values_sold()
+        context['total_turnover'] = get_total()
 
         return context
 
@@ -42,7 +42,7 @@ def delete_daily_report(request):
     OtherBought.objects.all().delete()
     OtherSold.objects.all().delete()
 
-    return render(request, 'common/delete-daily-report.html')
+    return render(request, 'common/index.html')
 
 
 class SellingChoice(views.TemplateView):

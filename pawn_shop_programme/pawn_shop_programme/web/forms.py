@@ -2,6 +2,7 @@ from django import forms
 
 from pawn_shop_programme.web.models import EuroBought, EuroSold, OtherSold, OtherBought, PoundSold, PoundBought
 
+
 class BuyEuroForm(forms.ModelForm):
     class Meta:
         model = EuroBought
@@ -78,6 +79,7 @@ class BuyOtherValueForm(forms.ModelForm):
         }
 
         widgets = {
+            'value_name': forms.TextInput(attrs={'placeholder': 'Напиши тук името'}),
             'course_bought': forms.TextInput(attrs={'placeholder': 'Напиши тук курса'}),
             'quantity': forms.TextInput(attrs={'placeholder': 'Напиши тук количеството'}),
         }

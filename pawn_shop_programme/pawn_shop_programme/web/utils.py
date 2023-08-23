@@ -23,7 +23,7 @@ def get_total_sum_pound_bought():
     total_sum = 0
 
     for pound in PoundBought.objects.all():
-        total_sum += pound.course_sold * pound.quantity
+        total_sum += pound.course_bought * pound.quantity
 
     return -total_sum
 

@@ -1,0 +1,35 @@
+{% extends 'common/base.html' %}
+{% block content %}
+
+    <section>
+        <div>
+            <p>Евро купени: {{ total_euro_bought|floatformat:'2' }}</p>
+        </div>
+        <div>
+            <p>Евро продадени: {{ total_euro_sold|floatformat:'2' }}</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p>Паунди купени: {{total_pound_bought|floatformat:'2' }}</p>
+        </div>
+        <div>
+            <p>Паунди продадени: {{ total_pound_sold|floatformat:'2' }}</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p> Други валути купени: {{ total_other_bought|floatformat:'2' }}</p>
+        </div>
+        <div>
+            <p>Други валути продадени: {{ total_other_sold|floatformat:'2' }}</p>
+        </div>
+
+    <div>
+        <p>Общо: {{ total_turnover|floatformat:'2' }}</p>
+    </div>
+    </section>
+
+    <a href="{% url 'delete daily report' %}">Приключи деня</a>
+
+{% endblock %}
